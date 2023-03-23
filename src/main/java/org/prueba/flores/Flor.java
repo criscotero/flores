@@ -1,11 +1,12 @@
 package org.prueba.flores;
 
-import jakarta.persistence.*;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import org.springframework.context.annotation.Bean;
+
+
+import javax.persistence.*;
 
 @Entity
 @Data
@@ -23,7 +24,7 @@ public class Flor {
             strategy = GenerationType.SEQUENCE,
             generator = "flor_id_sequence"
     )
-    private  String id;
+    private  Integer id;
 
     private  String name;
     private  Double price;
