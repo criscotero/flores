@@ -46,6 +46,13 @@ public class FlorController {
     }
 
 
+    @PostMapping("/flores-batch")
+    @ResponseBody
+    public ResponseEntity<String> insertNewBatchFlores_delete(@RequestBody List<Flor> flores) {
+        florService.deleteAllAndSaveNewBatch(flores);
+        return ResponseEntity.ok("Se crearon las flores");
+    }
+
 
 
 }

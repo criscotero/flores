@@ -33,6 +33,8 @@ public class FlorService {
     }
 
 
-
-
+    public List<Flor> deleteAllAndSaveNewBatch(List<Flor> flores) {
+        florRepository.deleteAll();
+        return florRepository.saveAll(flores);
+    }
 }
